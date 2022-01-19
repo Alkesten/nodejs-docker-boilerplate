@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  serice-api:
+    container_name: service-api
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    ports:
+      - '80:8000'
+    volumes:
+      - ./:/usr/src/app

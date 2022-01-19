@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  service-api:
+    container_name: service-api
+    restart: always
+    build: .
+    ports:
+      - '80:8000'
+    volumes:
+      - ./:/usr/src/app

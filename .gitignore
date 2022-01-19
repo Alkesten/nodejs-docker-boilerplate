@@ -1,0 +1,10 @@
+# package directories
+node_modules
+jspm_packages
+.dynamodb
+.webpack
+.DS_Store
+.webpack
+.build
+.env
+dist/
