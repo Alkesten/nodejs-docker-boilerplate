@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   module: {
     rules: [
       {
         exclude: [path.resolve(__dirname, 'node_modules')],
-        test: /\.ts$/,
+        test: /\.ts(x?)$/,
         use: 'ts-loader',
       },
     ],
@@ -16,7 +17,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
   target: 'node',
+  plugins: [new Dotenv()],
 };
